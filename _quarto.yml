@@ -9,7 +9,7 @@ book:
   date: today
   cover-image: cover.png
   search: true
-  repo-url: https://github.com/jjallaire/hopr/
+  repo-url: httpshttps://github.com/stewartli/adawf
   downloads: [pdf]
   sidebar:
     style: docked
