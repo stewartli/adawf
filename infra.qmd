@@ -1,0 +1,20 @@
+# Infrastructure {.numbered}
+
+
+The knowledge of linux (Ubuntu LTS) terminal will be beneficial when you use remote AWS services. For instance,   
+1. `awscli`, `terraform`,         
+2. `docker`, `podman`, `k8`,          
+
+
+ELT seems better than ETL as you normally don't know the part of transformation upfront.    
+
+
+
+
+
+
+
+
+
+
+

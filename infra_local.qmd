@@ -1,0 +1,97 @@
+# Local
+
+
+My **OS** is Windows 11. Install Windows Terminal, WSL2, and Linux distribution systems. Edit terminal theme/font, dotfiles of Bash/Tmux/Vim, and env variables. Install Git/GitBash and Docker/Podman if needed.        
+
+
+![Desktop](pic/os_desktop.png)
+
+
+![CMD](pic/os_info_cmd.png)
+
+
+![PowerShell](pic/os_info_pws.png)
+
+
+![Ubuntu](pic/os_info_linux.png)
+
+
+Install **programming** languages R/Python/DuckDB/Rust/Go. R is a language designed to get shit done (`@hadleywickham`). Python is a glue language. Rust is a decent language for software engineering. I often live in terminal to manage `pass`, `rsync` files, `quarto` markdown, `sftp` to server, `ssh` into remote machine, and do a quick analysis for ad hoc tasks.  
+
+
+![Terminal tools](pic/ter_tool.png)
+
+
+![R, Python, DuckDB](pic/ter_lang.png)
+
+
+Editors like nano (Linux) and notepad (Windows) can be used for their simplicity. However, appropriate **IDE** helps you organize your project better. I choose Vim (Linux), RStudio (Windows), and VS Code (Both) based on the active development environment. Of course, RStudio can be launched in Linux as well.       
+
+
+![Vim - R](pic/ide_linux_vi_r.png)
+
+
+![Vim - Python](pic/ide_linux_vi_py.png)
+
+
+![RStudio - R](pic/ide_win_rs_rpy1.png)
+
+
+![RStudio - Python](pic/ide_win_rs_rpy2.png)
+
+
+![VS Code in Linux - Jupyter](pic/ide_linux_vs_py1.png) 
+
+
+![VS Code in Linux - Interactive cell](pic/ide_linux_vs_py2.png)
+
+
+![VS Code in Windows - Script](pic/ide_win_vs_py1.png)
+
+
+![VS Code in Windows - Interactive cell](pic/ide_win_vs_py2.png)
+
+
+![VS Code in Windows - R](pic/ide_win_vs_r.png)
+
+
+It is vital to create a proper **folder** structure along with config file as you are able to move quickly and organize your scripts better. I run a command line tool (written in R) from GitBash and PowerShell to do it.       
+
+
+![CLI R - GitBash 1](pic/cli_setup_r1.png)
+
+
+![CLI R - GitBash 2](pic/cli_setup_r2.png)
+
+
+![CLI R - GitBash 3](pic/cli_setup_r3.png)
+
+
+![CLI R - GitBash 4](pic/cli_setup_r4.png)
+
+
+![CLI R - GitBash 5](pic/cli_setup_r5.png)
+
+
+![CLI R - PowerShell 1](pic/cli_setup_r6.png)
+
+
+![CLI R - PowerShell 2](pic/cli_setup_r7.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

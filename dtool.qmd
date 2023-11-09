@@ -1,0 +1,121 @@
+# Data tools
+
+
+SQL, R, Python, Julia, Rust, and JavaScript can be used interchangeably to perform data work at most of the time. Choose programming languages and relevant packages based on your needs and personal preference.    
+
+
+Assess your IO scenario after considered the followings.    
+**How big is data?**       
+1. Memory:      
+- `datatable`, `collapse`, `duckdb`, `polars`,    
+- `ibis`, `DataFusion`, `deltalake`,        
+2. Hard disk:         
+- [`arrow`](https://www.youtube.com/watch?v=O42LUmJZPx0),      
+3. Cluster:        
+- `spark`, `dask`,      
+
+**Where data lives?**      
+1. DB:              
+- `DBI`, `odbc`, `SQLAlchemy`, `connectorx`, `sqlx`,     
+2. SFTP:       
+- `RCurl`, `paramiko`,    
+3. Blob:      
+- `pins`, `aws.s3`, `s3fs`, `boto3`,          
+
+**In what form?** The preferred file types are `txt`, `csv`, `parquet`, `feather`.       
+1. Excel:    
+- `tidyxl`, `unpivotr`, `openxlsx`, `openpyxl`,    
+2. Word:      
+- `officer`, `docx`,      
+3. PPT:      
+- `officer`,  `python-pptx`,       
+4. PDF:     
+- `pdftools`, `PDFminer`, `PyPDF2`, `pdfplumber`,       
+5. SAS:    
+- `haven`,     
+6. Image:     
+- `magick`, `tesseract`, `pillow`, `cv2`,     
+7. Geo:     
+- `sf`, `countrycode`,     
+8. API:     
+- `httr2`, `request`, `reqwest`,      
+- `jsonlite`, `yaml`, `toml`,         
+9. Website:     
+- `html`, `xml`, `rvest`, `bs4`,     
+- `v8`, `chromote`, `selenium`, `playwright`,      
+
+**In what data structure and type?**    
+1. Data type:      
+- numeric, string, bool, factor, date,          
+2. Data collection:     
+- list, vector, data.frame (cell/0 row/1 column),    
+3. Verb:    
+- count/sort/select/filter/mutate/summarize/pivot/join,      
+
+
+Analysis work is to produce meaningful insight via slice dice. Classify a set of tools based on the following analytics steps. To reduce repetitive work, you can create functions, OOP, box, package, and cli.      
+1. Interact with DB:          
+- `dbplyr`, `dbplot`, `dbcooper`,     
+2. Data cleaning:      
+- `base`, `tidyverse`, `pandas`,    
+- `janitor`, `glue`, `tidylog`,     
+- `waldo`, `diffobj`, `compareDF`,      
+3. Data validation:       
+- `pointblank`, `validate`, `greate expectation`, `pydantic`,     
+4. Data visualization[^1]:         
+- `grid`, `patchwork`, `ggfx`, `ggtext`, `showtext`,         
+- `ragg`,  `scales`, `formattable`, `sparkline`,      
+- `gghighlight`, `ggforce`,     
+- `imager`, `imagerExtra`, `ggimage`, `ggpubr`,      
+- `igraph`, `ggraph`, `tidygraph`, `networkD3`, `visNetwork`,      
+- `DiagrammeR`, `UpSetR`, `tmap`,        
+5. Table:      
+- `gt`, `gtExtras`, `gtsummary`, `modelsummary`,     
+- `flextable`, `kableExtra`,        
+6. EDA:      
+- `skimr`, `naniar`, `visdat`, `inspectdf`,       
+7. Stats:               
+- `corrplot`, `tidylo`, `widyr`, `broom`,         
+8. Report:                   
+- `quarto`, `whisker`, `target`, `jinja2`,         
+9. API deploy:          
+- `vetiver`, `plumber`, `fastapi`,         
+10. Dashboard:      
+- `shiny`, `htmltools`, `htmlwidgets`, `crosstalk`, `leaflet`,       
+- `bslib`, `thematic`, `sass`,           
+- `DT`, `reactable`, `reactablefmtr`,               
+- `plotly`, `echarts4r`, `bokeh`,         
+- `dash`, `streamlit`,              
+11. WASM:     
+- `webr`, `pyodide`, `wasm_bindgen`,         
+12. GUI:     
+- [`PyAutoGUI`](https://automatetheboringstuff.com/),    
+- `Tkinter`, [`PyQt5`](https://www.youtube.com/@codefirstwithhala),       
+
+
+Consider other utility tools when necessary.           
+1. Environment:     
+- `rvenv`, `venv`,     
+2. Helper:       
+- `cli`, `crayon`,    
+- `clipr`, `withr`, `callr`, `pingr`, `curl`,     
+3. Email:      
+- `blastula`, `emayili`, `smtplib`, `pywin32`,      
+4. Unzip:         
+- `archive`, `zipfile`,     
+5. FFI:      
+- `rlang`, `vctrs`, `lobstr`, `S7`,     
+- `cpp11`, `Rcpp`, `extendr`, `pyo3`, `bindgen`,     
+
+
+[^1]: `ggplot2` [@ggplot2]
+
+
+
+
+
+
+
+
+
+

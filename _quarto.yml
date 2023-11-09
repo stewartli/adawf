@@ -1,0 +1,43 @@
+project:
+  type: book
+  output-dir: docs
+
+book:
+  title: "Data Analytics Engineering"
+  subtitle: "For Accountants and Auditors"
+  author: "Stewart Li"
+  date: today
+  cover-image: cover.png
+  search: true
+  repo-url: https://github.com/jjallaire/hopr/
+  downloads: [pdf]
+  sidebar:
+    style: docked
+    background: light
+  chapters:
+    - index.qmd
+    - part: infra.qmd
+      chapters: 
+        - infra_local.qmd
+        - infra_etl.qmd
+    - part: dtool.qmd
+      chapters: 
+        - dtool_polars.qmd
+        - dtool_datatable.qmd
+    - references.qmd
+  # appendices:
+    # - tools.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: [cosmo]
+    toc: true
+    toc-depth: 2
+    number-depth: 3
+  pdf:
+    documentclass: scrreprt
+
+
+

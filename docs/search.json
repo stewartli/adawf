@@ -1,0 +1,100 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Data Analytics Engineering",
+    "section": "",
+    "text": "Preface\nThis book documents the data analytics engineering workflow, which contains two parts namely infrastructure and tools. It focuses on its implementation instead of its setup. macOS is left out as Windows OS is widely used in the business setting. Pick the preferred tools after considered your career path. For instance, data/dev ops, data/analytic/ML engineer, and data analyst/scientist. My goal is to have a better solution to do auditing/accounting job easily (powerful tools), accurately (reproducible process), and automatically (job scheduler). If you don’t know what I am talking about, watch data firm and financial statement preparation, and read the paper (Li, Fisher, and Falta 2020).\nYou might ask how it relates to you. Generally, CFO is charge of COA, Audit partner emphasize accounting treatments, and staffs do their job at the transactional level. You need much better tools to pan out at work. For instance,\n1. New job requires the strong analytic mind. Excel or similar tools are not sufficient for pattern recognition.\n2. A higher staff turnover is caused by pressure and boredom. You need to be efficient by automating repetitive work such as reconciliation.\n\n\n\n\nLi, Stewart, Richard Fisher, and Michael Falta. 2020. “The Effectiveness of Artificial Neural Networks Applied to Analytical Procedures Using High Level Data: A Simulation Analysis.” Meditari Accountancy Research 29 (6): 1425–50. https://doi.org/10.1108/medar-06-2020-0920."
+  },
+  {
+    "objectID": "infra.html",
+    "href": "infra.html",
+    "title": "Infrastructure",
+    "section": "",
+    "text": "The knowledge of linux (Ubuntu LTS) terminal will be beneficial when you use remote AWS services. For instance,\n1. awscli, terraform,\n2. docker, podman, k8,\nELT seems better than ETL as you normally don’t know the part of transformation upfront."
+  },
+  {
+    "objectID": "infra_local.html",
+    "href": "infra_local.html",
+    "title": "1  Local",
+    "section": "",
+    "text": "My OS is Windows 11. Install Windows Terminal, WSL2, and Linux distribution systems. Edit terminal theme/font, dotfiles of Bash/Tmux/Vim, and env variables. Install Git/GitBash and Docker/Podman if needed.\n\n\n\nDesktop\n\n\n\n\n\nCMD\n\n\n\n\n\nPowerShell\n\n\n\n\n\nUbuntu\n\n\nInstall programming languages R/Python/DuckDB/Rust/Go. R is a language designed to get shit done (@hadleywickham). Python is a glue language. Rust is a decent language for software engineering. I often live in terminal to manage pass, rsync files, quarto markdown, sftp to server, ssh into remote machine, and do a quick analysis for ad hoc tasks.\n\n\n\nTerminal tools\n\n\n\n\n\nR, Python, DuckDB\n\n\nEditors like nano (Linux) and notepad (Windows) can be used for their simplicity. However, appropriate IDE helps you organize your project better. I choose Vim (Linux), RStudio (Windows), and VS Code (Both) based on the active development environment. Of course, RStudio can be launched in Linux as well.\n\n\n\nVim - R\n\n\n\n\n\nVim - Python\n\n\n\n\n\nRStudio - R\n\n\n\n\n\nRStudio - Python\n\n\n\n\n\nVS Code in Linux - Jupyter\n\n\n\n\n\nVS Code in Linux - Interactive cell\n\n\n\n\n\nVS Code in Windows - Script\n\n\n\n\n\nVS Code in Windows - Interactive cell\n\n\n\n\n\nVS Code in Windows - R\n\n\nIt is vital to create a proper folder structure along with config file as you are able to move quickly and organize your scripts better. I run a command line tool (written in R) from GitBash and PowerShell to do it.\n\n\n\nCLI R - GitBash 1\n\n\n\n\n\nCLI R - GitBash 2\n\n\n\n\n\nCLI R - GitBash 3\n\n\n\n\n\nCLI R - GitBash 4\n\n\n\n\n\nCLI R - GitBash 5\n\n\n\n\n\nCLI R - PowerShell 1\n\n\n\n\n\nCLI R - PowerShell 2"
+  },
+  {
+    "objectID": "infra_etl.html",
+    "href": "infra_etl.html",
+    "title": "2  ELT",
+    "section": "",
+    "text": "Consider the following examples to establish a data pipeline.\n1. A zip file lands in data lake (s3/minio) daily.\n2. Execute scripts in the server (ec2) to download/unzip/select/upload files based on mtime. It produces a file (csv) to track work done at the agreed cut-off time (cron). AWS lambda is another option.\n3. snowflake external stage (s3) is triggered by a file (txt) to kicks off snowpipe and ingest data to DB as variant. Similar storage are databrick, dremio, clickhouse. The preferred formats are parquet, iceberg, ADBC.\n4. Move data between platforms via airbyte.\n5. Validate and transform DB raw to DB mart through dbt.\n6. Automatize the process by a task scheduler prefect, airflow, dagster.\n7. Create a dashboard for DB mart via metabase, superset."
+  },
+  {
+    "objectID": "dtool.html#footnotes",
+    "href": "dtool.html#footnotes",
+    "title": "Data tools",
+    "section": "",
+    "text": "ggplot2 (Wickham 2016)↩︎"
+  },
+  {
+    "objectID": "dtool_polars.html",
+    "href": "dtool_polars.html",
+    "title": "3  Polars",
+    "section": "",
+    "text": "Command line tools allow you to do those repetitive data work easily. The following three examples are.\n1. argparse and duckdb.\n2. click and polars.\n3. clap and polars.\n\n\n\nCLI - argparse 1\n\n\n\n\n\nCLI - argparse 2\n\n\n\n\n\nCLI - argparse 3\n\n\n\n\n\nCLI - click 1\n\n\n\n\n\nCLI - click 2\n\n\n\n\n\nCLI - click 3\n\n\n\n\n\nCLI - click 4\n\n\n\n\n\nCLI - clap 1\n\n\n\n\n\nCLI - clap 2"
+  },
+  {
+    "objectID": "dtool_datatable.html#io",
+    "href": "dtool_datatable.html#io",
+    "title": "4  Analysis",
+    "section": "4.1 IO",
+    "text": "4.1 IO\n\ndf_raw &lt;- read_csv(here::here('data/factor_ar.csv')) %&gt;% \n  janitor::clean_names() \n\nglimpse(df_raw)\n\ndata.table is the fastest IO tool if your data can fit in the memory.\n\nlibrary(data.table)\n\n# read in\ndata.table::fread(\"grep -v '770' ./data/factor_ar.csv\")[, .N, by = countryCode]\n\n# write out\ndf_dt &lt;- as.data.table(df_raw)\n\ndf_dt[, \n      fwrite(data.table(.SD), \n             paste0(\"C:/Users/Stewart Li/Desktop/res/\", \n                    paste0(country_code, \".csv\"))), by = country_code]\n\n# read in \ndata.table(\n  country_code.csv = Sys.glob(\"C:/Users/Stewart Li/Desktop/res/*.csv\")\n)[, fread(country_code.csv), by = country_code.csv]\n\nGet to know your data. For instance, any missing value, counting variables, and others.\n\n# no NA\nsapply(df_raw, function(x) {sum(is.na(x)) / nrow(df_raw)}) %&gt;%   \n  enframe() %&gt;%                                                              \n  mutate(value = formattable::percent(value))\n\nnaniar::gg_miss_var(df_raw)\nnaniar::vis_miss(df_raw)\n\n# no duplicate \ndf_raw %&gt;% count(invoice_number, sort = TRUE)                                \n\n# overview of data\nskimr::skim(df_raw)"
+  },
+  {
+    "objectID": "dtool_datatable.html#cleaning",
+    "href": "dtool_datatable.html#cleaning",
+    "title": "4  Analysis",
+    "section": "4.2 Cleaning",
+    "text": "4.2 Cleaning\nAfter having a basic understanding about data, do the followings to clean it up.\n1. cast data types.\n2. 30 days credit term is allowed. drop it subsequently (constant).\n3. drop column (paperless_date).\n4. rename and rearrange columns.\n\ndf_clean &lt;- df_raw %&gt;%  \n  mutate(across(contains(\"date\"), lubridate::mdy), \n         across(c(country_code, invoice_number), as.character)) %&gt;% \n  mutate(credit = as.numeric(due_date - invoice_date)) %&gt;% \n  select(c(country_code, customer_id, paperless_bill, disputed, \n           invoice_number, invoice_amount, invoice_date, due_date, settled_date, \n           settle = days_to_settle, late = days_late))\n\nsetdiff(colnames(df_raw), colnames(df_clean))"
+  },
+  {
+    "objectID": "dtool_datatable.html#validate",
+    "href": "dtool_datatable.html#validate",
+    "title": "4  Analysis",
+    "section": "4.3 Validate",
+    "text": "4.3 Validate\nValidate data if it is received from other team members.\n\n# data type\ndf_clean %&gt;% \n  select(contains(\"date\")) %&gt;% \n  pointblank::col_is_date(columns = everything())   \n\n# cross checking\ndf_clean %&gt;% \n  mutate(settle1 = as.numeric(settled_date - invoice_date), \n         late1 = as.numeric(settled_date - due_date), \n         late1 = if_else(late1 &lt; 0, 0, late1)) %&gt;% \n  summarise(late_sum = sum(late1) - sum(late), \n            settle_sum = sum(settle1) - sum(settle))"
+  },
+  {
+    "objectID": "dtool_datatable.html#munging",
+    "href": "dtool_datatable.html#munging",
+    "title": "4  Analysis",
+    "section": "4.4 Munging",
+    "text": "4.4 Munging\nAsk reasonable questions via slice dice.\n\n# window operation: lag, first, nth, \ndf_clean %&gt;% \n  arrange(invoice_date) %&gt;% \n  group_by(country_code) %&gt;% \n  mutate(increase = invoice_amount - dplyr::lag(invoice_amount, default = 0), \n         indcator = ifelse(increase &gt; 0, 1, 0)) %&gt;% \n  ungroup() %&gt;% \n  mutate(settle_grp = (settle %/% 10) * 10) \n\ndf_clean %&gt;% \n  group_by(country_code) %&gt;% \n  arrange(invoice_date) %&gt;% \n  summarise(n = n(), \n            sales = sum(invoice_amount), \n            first_disputed_late = first(late[disputed == 'Yes']), \n            first_disputed_inv_date = first(invoice_date[disputed == 'Yes']), \n            largest_late = max(late[disputed == 'Yes']), \n            largest_inv_amt = invoice_amount[late == max(late)], \n            .groups = 'drop') \n\nCut late into four categories based on the firm’s credit policy.\n\nsort(unique(df_clean$late))\n\ndf_late &lt;- df_clean %&gt;% \n  dplyr::filter(late != 0) %&gt;%\n  mutate(reminder = case_when(late &gt; 0 & late &lt;= 10 ~ \"1st email\",\n                              late &gt; 10 & late &lt;= 20 ~ \"2nd email\",\n                              late &gt; 20 & late &lt;= 30 ~ \"legal case\",\n                              TRUE ~ \"bad debt\")) \n\n# anomaly by country\ndf_late %&gt;% \n  ggplot(aes(late, disputed, color = country_code)) +\n  geom_boxplot() +\n  theme_light()\n\n# summary table\ndf_late %&gt;% \n  group_by(reminder, disputed) %&gt;% \n  summarise(across(late, tibble::lst(sum, min, max, sd)), \n            .groups = 'drop') %&gt;% \n  gt::gt()\n\n# clients without dispute do not pay. \ndf_late %&gt;% \n  dplyr::filter(disputed == 'No', reminder %in% c('legal case', 'bad debt'))\n\n\n\n\nData munging"
+  },
+  {
+    "objectID": "dtool_datatable.html#eda",
+    "href": "dtool_datatable.html#eda",
+    "title": "4  Analysis",
+    "section": "4.5 EDA",
+    "text": "4.5 EDA\nFocus on a handful of variables after dropped others.\n\ndf &lt;- df_clean %&gt;% \n  select(-c(contains('date'), invoice_number))\n\n\n# freq table \nwith(df, table(disputed, country_code) %&gt;% addmargins())                      \ntapply(df$invoice_amount, list(df$disputed, df$country_code), median)\n\n# descriptive stats\ndf %&gt;% \n  select(where(is.numeric)) %&gt;% \n  summary()\n\n\n# normal distribution\ndf %&gt;% \n  ggplot(aes(invoice_amount, fill = disputed)) +\n  geom_histogram(bins = 10, position = 'dodge') +\n  geom_vline(xintercept = median(df$invoice_amount), color = 'red', \n             size = 3, linetype = \"dashed\") +\n  theme_light()\n\n\n# correlation\ndf %&gt;% \n  select(where(is.numeric)) %&gt;% \n  cor() %&gt;% \n  corrplot::corrplot(method = 'color', order = 'FPC', type = 'lower', diag = FALSE)\n\ndf %&gt;% \n  select(where(is.numeric)) %&gt;% \n  corrr::correlate() %&gt;% \n  corrr::rearrange() %&gt;% \n  corrr::shave() %&gt;% \n  corrr::fashion()"
+  },
+  {
+    "objectID": "dtool_datatable.html#model",
+    "href": "dtool_datatable.html#model",
+    "title": "4  Analysis",
+    "section": "4.6 Model",
+    "text": "4.6 Model\nRead more about logistic regression here, here, and here.\n\n# easy stats plot\ndf %&gt;%\n  mutate(prob = ifelse(disputed == \"Yes\", 1, 0)) %&gt;%\n  ggplot(aes(late, prob)) +\n  geom_point(alpha = .2) +\n  geom_smooth(method = \"glm\", method.args = list(family = \"binomial\")) +\n  theme_light()\n\n\n# model comparison\ndf_mod &lt;- df %&gt;%\n  mutate(disputed = as.factor(disputed))\n\nmod1 &lt;- glm(disputed ~ late, family = \"binomial\", data = df_mod)\nmod2 &lt;- glm(disputed ~ late + settle + invoice_amount, \n            family = \"binomial\", data = df_mod)\n\nsummary(mod1)\nanova(mod1, mod2, test = \"Chisq\")\n\n\n# model diagnostic\ndf_mod_res &lt;- broom::augment(mod1, df_mod) %&gt;% \n  mutate(pred = ifelse(.fitted  &gt; .5, \"Yes\", \"No\") %&gt;% as.factor())\n\n# confusion matrix  \ndf_mod_res %&gt;% \n  yardstick::conf_mat(disputed, pred) %&gt;%\n  autoplot()\n\n# plot pred\ndf_mod_res %&gt;% \n  mutate(res = disputed == pred) %&gt;% \n  ggplot(aes(invoice_amount, settle, color = res)) +\n  geom_point() +\n  theme_light()\n\ndf_mod_res %&gt;% \n  ggplot(aes(invoice_amount, settle, color = disputed)) + \n  geom_point() + \n  facet_wrap(~pred) +\n  theme_light()"
+  },
+  {
+    "objectID": "dtool_datatable.html#report",
+    "href": "dtool_datatable.html#report",
+    "title": "4  Analysis",
+    "section": "4.7 Report",
+    "text": "4.7 Report\n\nlibrary(patchwork)\nlibrary(ggtext)\nlibrary(showtext)\n\np1 &lt;- df %&gt;% \n  ggplot(aes(invoice_amount, settle, color = disputed)) +\n  geom_point() +\n  scale_color_manual(labels = c(\"Agreed\", 'Disputed'), \n                     values = c(\"#9AC2BB\", '#E99184')) +\n  guides(color = guide_legend(title.position = \"top\", title = \"\")) +\n  labs(x = \"\", y = \"Settlement days\") +\n  theme_light() +\n  theme(\n    legend.position = c(.95, .98), \n    legend.background = element_rect(color = \"transparent\", fill = 'transparent'),\n    legend.box.background = element_rect(color = \"transparent\", fill = \"transparent\"),\n    legend.key = element_rect(colour = \"transparent\", fill = \"transparent\")\n  )\n\np2 &lt;- df %&gt;% \n  group_by(if_late = late == 0) %&gt;% \n  ggplot(aes(invoice_amount, settle, color = disputed)) +\n  geom_point(show.legend = FALSE) +\n  scale_color_manual(labels = c(\"Agreed\", 'Disputed'), \n                     values = c(\"#9AC2BB\", '#E99184')) +\n  facet_wrap(~if_late) +\n  labs(caption = \"©RAudit Solution | **Stewart Li**&lt;br&gt;(Data source: Kaggle)\", \n       x = \"Invoice amount\", \n       y = \"Settlement days\") +\n  theme_light() +\n  theme(\n    axis.title.y = element_text(margin = margin(b = 1, unit = \"in\")),\n    strip.text = element_text(color = '#2D4248'),\n    strip.background = element_blank(), \n    plot.caption = element_markdown(lineheight = 1.2)\n  )\n\np1 / p2 +\n  plot_annotation(\n    title = \"The &lt;span style = 'color:#E99184;'&gt;Analysis&lt;/span&gt; of cash collection\", \n    subtitle = 'Focus on those slow settlement without dispute', \n    tag_levels = 'A'\n  ) &\n  theme(plot.tag = element_text(size = 8), \n        plot.title = element_markdown())\n\n\n\n\nCombined plot"
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Li, Stewart, Richard Fisher, and Michael Falta. 2020. “The\nEffectiveness of Artificial Neural Networks Applied to Analytical\nProcedures Using High Level Data: A Simulation Analysis.”\nMeditari Accountancy Research 29 (6): 1425–50. https://doi.org/10.1108/medar-06-2020-0920.\n\n\nWickham, Hadley. 2016. Ggplot2: Elegant Graphics for Data\nAnalysis. Springer-Verlag New York. https://ggplot2.tidyverse.org."
+  }
+]

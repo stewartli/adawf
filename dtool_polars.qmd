@@ -1,0 +1,53 @@
+# Polars
+
+
+Command line tools allow you to do those repetitive data work easily. The following three examples are.    
+1. `argparse` and `duckdb`.    
+2. `click` and `polars`.   
+3. `clap` and `polars`.   
+
+
+![CLI - argparse 1](pic/dt_pycli_arg1.png)
+
+
+![CLI - argparse 2](pic/dt_pycli_arg2.png)
+
+
+![CLI - argparse 3](pic/dt_pycli_arg3 .png)
+
+
+![CLI - click 1](pic/dt_pycli_click1.png)
+
+
+![CLI - click 2](pic/dt_pycli_click2.png)
+
+
+![CLI - click 3](pic/dt_pycli_click3.png)
+
+
+![CLI - click 4](pic/dt_pycli_click4.png)
+
+
+![CLI - clap 1](pic/dt_rscli_clap1.png)
+
+
+![CLI - clap 2](pic/dt_rscli_clap2.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

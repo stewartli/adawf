@@ -1,0 +1,19 @@
+# Preface {.unnumbered}
+
+
+This book documents the data analytics engineering workflow, which contains two parts namely infrastructure and tools. It focuses on its implementation instead of its setup. macOS is left out as Windows OS is widely used in the business setting. Pick the preferred tools after considered your career path. For instance, data/dev ops, data/analytic/ML engineer, and data analyst/scientist. My goal is to have a better solution to do auditing/accounting job easily (powerful tools), accurately (reproducible process), and automatically (job scheduler). If you don't know what I am talking about, watch [data firm](https://www.youtube.com/watch?v=na7yqvz5-B4&list=PLGVZCDnMOq0peDguAzds7kVmBr8avp46K&index=60) and [financial statement preparation](https://www.youtube.com/watch?v=JsaGSrM8aZ0), and read the paper [@li2020].         
+
+
+You might ask how it relates to you. Generally, CFO is charge of COA, Audit partner emphasize accounting treatments, and staffs do their job at the transactional level. You need much better tools to pan out at work. For instance,     
+1. New job requires the strong analytic mind. Excel or similar tools are not sufficient for pattern recognition.      
+2. A higher staff turnover is caused by pressure and boredom. You need to be efficient by automating repetitive work such as reconciliation.        
+
+
+
+
+
+
+
+
+
+
