@@ -34,6 +34,18 @@ Editors like nano (Linux) and notepad (Windows) can be used for their simplicity
 ![Vim - Python](pic/ide_linux_vi_py.png)
 
 
+![Tmux - Nvim 1](pic/nvim_tmux_01.png)
+
+
+![Tmux -Nvim 2](pic/nvim_tmux_02.png)
+
+
+![Tmux - Nvim 3](pic/nvim_tmux_03.png)
+
+
+![Tmux -Nvim 4](pic/nvim_tmux_04.png)
+
+
 ![RStudio - R](pic/ide_win_rs_rpy1.png)
 
 
