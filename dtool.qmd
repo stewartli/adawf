@@ -61,7 +61,7 @@ Analysis work is to produce meaningful insight via slice dice. Classify a set of
 - `janitor`, `glue`, `tidylog`,     
 - `waldo`, `diffobj`, `compareDF`,      
 3. Data validation:       
-- `pointblank`, `validate`, `greate expectation`, `pydantic`,     
+- `pointblank`, `validate`, `pandera`, `greate expectation`, `pydantic`,     
 4. Data visualization[^1]:         
 - `grid`, `patchwork`, `ggfx`, `ggtext`, `showtext`,         
 - `ragg`,  `scales`, `formattable`, `sparkline`,      

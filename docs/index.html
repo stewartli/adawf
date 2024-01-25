@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Stewart Li">
-<meta name="dcterms.date" content="2023-11-19">
+<meta name="dcterms.date" content="2024-01-25">
 
 <title>Data Analytics Engineering</title>
 <style>
@@ -150,6 +150,12 @@ div.csl-indent {
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">ELT</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./infra_axum.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Example 1</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -164,13 +170,19 @@ div.csl-indent {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./dtool_polars.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Polars</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Polars</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./dtool_datatable.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Analysis</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Analysis</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./dtool_payroll.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Example 2</span></span></a>
   </div>
 </li>
       </ul>
@@ -218,7 +230,7 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 19, 2023</p>
+      <p class="date">January 25, 2024</p>
     </div>
   </div>
   
@@ -231,7 +243,7 @@ div.csl-indent {
 
 <section id="preface" class="level1 unnumbered">
 <h1 class="unnumbered">Preface</h1><p><img src="cover.png" title="Data Analytics Engineering" class="quarto-cover-image img-fluid"></p>
-<p>This book documents the data analytics engineering workflow, which contains two parts namely infrastructure and tools. It focuses on its implementation instead of its setup. macOS is left out as Windows OS is widely used in the business setting. Pick the preferred tools after considered your career path. For instance, data/dev ops, data/analytic/ML engineer, and data analyst/scientist. My goal is to have a better solution to do auditing/accounting job easily (powerful tools), accurately (reproducible process), and automatically (job scheduler). If you don’t know what I am talking about, watch <a href="https://www.youtube.com/watch?v=na7yqvz5-B4&amp;list=PLGVZCDnMOq0peDguAzds7kVmBr8avp46K&amp;index=60">data firm</a> and <a href="https://www.youtube.com/watch?v=JsaGSrM8aZ0">financial statement preparation</a>, and read the paper <span class="citation" data-cites="li2020">(<a href="references.html#ref-li2020" role="doc-biblioref">Li, Fisher, and Falta 2020</a>)</span>.</p>
+<p>This book documents the data analytics engineering workflow, which contains two parts namely infrastructure and tools. It focuses on its implementation instead of its setup. macOS is left out as Windows OS is widely used in the business setting. Pick the preferred tools after considered your career path. For instance, data/dev ops, data/analytic/ML engineer, and data analyst/scientist. My goal is to have a better solution to do auditing/accounting job easily (powerful tools), accurately (reproducible process), and automatically (job scheduler). If you don’t know what I am talking about, watch <a href="https://www.youtube.com/watch?v=na7yqvz5-B4&amp;list=PLGVZCDnMOq0peDguAzds7kVmBr8avp46K&amp;index=60">data firm</a>, <a href="https://www.youtube.com/watch?v=JsaGSrM8aZ0">financial statement preparation</a>, <a href="https://www.youtube.com/watch?v=UzpeG20eA8o">insurance data analysis</a>, and read the paper <span class="citation" data-cites="li2020">(<a href="references.html#ref-li2020" role="doc-biblioref">Li, Fisher, and Falta 2020</a>)</span>.</p>
 <p>You might ask how it relates to you. Generally, CFO is charge of COA, Audit partner emphasize accounting treatments, and staffs do their job at the transactional level. You need much better tools to pan out at work. For instance,<br>
 1. New job requires the strong analytic mind. Excel or similar tools are not sufficient for pattern recognition.<br>
 2. A higher staff turnover is caused by pressure and boredom. You need to be efficient by automating repetitive work such as reconciliation.</p>

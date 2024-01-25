@@ -1,0 +1,35 @@
+# Example 1
+
+
+It is very useful to create a micro service `API` internally.     
+
+
+![Web server](pic/axum_01.png)
+
+
+![Get](pic/axum_02.png)
+
+
+![Post](pic/axum_03.png)
+
+
+![Template](pic/axum_04.png)
+
+
+![R client](pic/axum_05.png)
+
+
+```{r}
+#| eval: false
+httr2::request('localhost:3000/share') %>% 
+  httr2::req_perform() %>% 
+  httr2::resp_body_string()
+```
+
+
+
+
+
+
+
+

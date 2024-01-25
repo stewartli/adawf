@@ -11,12 +11,10 @@ Consider the following examples to establish a data pipeline.
 7. Create a dashboard for DB mart via `metabase`, `superset`.       
 
 
+![DuckDB cloud](pic/duckdb_01.png)
 
 
-
-
-
-
+![DuckDB terminal](pic/duckdb_02.png)
 
 
 

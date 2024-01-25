@@ -1,7 +1,7 @@
 # Local
 
 
-My **OS** is Windows 11. Install Windows Terminal, WSL2, and Linux distribution systems. Edit terminal theme/font, dotfiles of Bash/Tmux/Vim, and env variables. Install Git/GitBash and Docker/Podman if needed.        
+My **OS** is Windows 11. Install Window manager `komorebi`, Windows Terminal `wsl2`, and Linux distribution systems. Edit terminal theme/font, dotfiles of Bash/Tmux/Vim, and env variables. Install Git/GitBash and Docker/Podman if needed.        
 
 
 ![Desktop](pic/os_desktop.png)
@@ -16,7 +16,7 @@ My **OS** is Windows 11. Install Windows Terminal, WSL2, and Linux distribution 
 ![Ubuntu](pic/os_info_linux.png)
 
 
-Install **programming** languages R/Python/DuckDB/Rust/Go. R is a language designed to get shit done (`@hadleywickham`). Python is a glue language. Rust is a decent language for software engineering. I often live in terminal to manage `pass`, `rsync` files, `quarto` markdown, `sftp` to server, `ssh` into remote machine, and do a quick analysis for ad hoc tasks.  
+Install **programming** languages R/Python/DuckDB/Rust/Go. R is a language designed to get shit done (`@hadleywickham`). Python is a glue language. Rust is a decent language for software engineering. I often live in terminal to `rofi` applications, manage `pass`, `rsync` files, `quarto` markdown, `sftp` to server, `ssh` into remote machines, and do a quick analysis for ad hoc tasks.  
 
 
 ![Terminal tools](pic/ter_tool.png)

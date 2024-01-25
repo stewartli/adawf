@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Data Analytics Engineering - 4&nbsp; Analysis</title>
+<title>Data Analytics Engineering - 5&nbsp; Analysis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,7 +64,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./references.html" rel="next">
+<link href="./dtool_payroll.html" rel="next">
 <link href="./dtool_polars.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -108,7 +108,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./dtool.html">Data tools</a></li><li class="breadcrumb-item"><a href="./dtool_datatable.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Analysis</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./dtool.html">Data tools</a></li><li class="breadcrumb-item"><a href="./dtool_datatable.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Analysis</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -164,6 +164,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">ELT</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./infra_axum.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Example 1</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -178,13 +184,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./dtool_polars.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Polars</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Polars</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./dtool_datatable.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Analysis</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Analysis</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./dtool_payroll.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Example 2</span></span></a>
   </div>
 </li>
       </ul>
@@ -205,13 +217,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul class="collapse">
-  <li><a href="#io" id="toc-io" class="nav-link active" data-scroll-target="#io"><span class="header-section-number">4.1</span> IO</a></li>
-  <li><a href="#cleaning" id="toc-cleaning" class="nav-link" data-scroll-target="#cleaning"><span class="header-section-number">4.2</span> Cleaning</a></li>
-  <li><a href="#validate" id="toc-validate" class="nav-link" data-scroll-target="#validate"><span class="header-section-number">4.3</span> Validate</a></li>
-  <li><a href="#munging" id="toc-munging" class="nav-link" data-scroll-target="#munging"><span class="header-section-number">4.4</span> Munging</a></li>
-  <li><a href="#eda" id="toc-eda" class="nav-link" data-scroll-target="#eda"><span class="header-section-number">4.5</span> EDA</a></li>
-  <li><a href="#model" id="toc-model" class="nav-link" data-scroll-target="#model"><span class="header-section-number">4.6</span> Model</a></li>
-  <li><a href="#report" id="toc-report" class="nav-link" data-scroll-target="#report"><span class="header-section-number">4.7</span> Report</a></li>
+  <li><a href="#io" id="toc-io" class="nav-link active" data-scroll-target="#io"><span class="header-section-number">5.1</span> IO</a></li>
+  <li><a href="#cleaning" id="toc-cleaning" class="nav-link" data-scroll-target="#cleaning"><span class="header-section-number">5.2</span> Cleaning</a></li>
+  <li><a href="#validate" id="toc-validate" class="nav-link" data-scroll-target="#validate"><span class="header-section-number">5.3</span> Validate</a></li>
+  <li><a href="#munging" id="toc-munging" class="nav-link" data-scroll-target="#munging"><span class="header-section-number">5.4</span> Munging</a></li>
+  <li><a href="#eda" id="toc-eda" class="nav-link" data-scroll-target="#eda"><span class="header-section-number">5.5</span> EDA</a></li>
+  <li><a href="#model" id="toc-model" class="nav-link" data-scroll-target="#model"><span class="header-section-number">5.6</span> Model</a></li>
+  <li><a href="#report" id="toc-report" class="nav-link" data-scroll-target="#report"><span class="header-section-number">5.7</span> Report</a></li>
   </ul>
 </nav>
     </div>
@@ -220,7 +232,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Analysis</span></h1>
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Analysis</span></h1>
 </div>
 
 
@@ -236,8 +248,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 <p><strong>Factored Accounts Receivable</strong> - The biggest challenge of Factoring is to predict if and when invoices will be paid. The factor provides funds against this future payment to the business by buying their invoice. The factor then collects the payment and charges their interest rate. If the invoice isn’t paid, the factor loses their advanced funds. Try using this data set for predicting when payments will be made. Get the data <a href="https://www.kaggle.com/datasets/hhenry/finance-factoring-ibm-late-payment-histories">here</a>.</p>
-<section id="io" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="io"><span class="header-section-number">4.1</span> IO</h2>
+<section id="io" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="io"><span class="header-section-number">5.1</span> IO</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>df_raw <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">'data/factor_ar.csv'</span>)) <span class="sc">%&gt;%</span> </span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  janitor<span class="sc">::</span><span class="fu">clean_names</span>() </span>
@@ -281,8 +293,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>skimr<span class="sc">::</span><span class="fu">skim</span>(df_raw)                                                          </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="cleaning" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="cleaning"><span class="header-section-number">4.2</span> Cleaning</h2>
+<section id="cleaning" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="cleaning"><span class="header-section-number">5.2</span> Cleaning</h2>
 <p>After having a basic understanding about data, do the followings to clean it up.<br>
 1. cast data types.<br>
 2. 30 days credit term is allowed. drop it subsequently (constant).<br>
@@ -300,8 +312,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="fu">setdiff</span>(<span class="fu">colnames</span>(df_raw), <span class="fu">colnames</span>(df_clean))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="validate" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="validate"><span class="header-section-number">4.3</span> Validate</h2>
+<section id="validate" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="validate"><span class="header-section-number">5.3</span> Validate</h2>
 <p>Validate data if it is received from other team members.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># data type</span></span>
@@ -318,8 +330,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>            <span class="at">settle_sum =</span> <span class="fu">sum</span>(settle1) <span class="sc">-</span> <span class="fu">sum</span>(settle))                        </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="munging" class="level2" data-number="4.4">
-<h2 data-number="4.4" class="anchored" data-anchor-id="munging"><span class="header-section-number">4.4</span> Munging</h2>
+<section id="munging" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="munging"><span class="header-section-number">5.4</span> Munging</h2>
 <p>Ask reasonable questions via slice dice.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># window operation: lag, first, nth, </span></span>
@@ -377,8 +389,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </figure>
 </div>
 </section>
-<section id="eda" class="level2" data-number="4.5">
-<h2 data-number="4.5" class="anchored" data-anchor-id="eda"><span class="header-section-number">4.5</span> EDA</h2>
+<section id="eda" class="level2" data-number="5.5">
+<h2 data-number="5.5" class="anchored" data-anchor-id="eda"><span class="header-section-number">5.5</span> EDA</h2>
 <p>Focus on a handful of variables after dropped others.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> df_clean <span class="sc">%&gt;%</span> </span>
@@ -418,8 +430,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>  corrr<span class="sc">::</span><span class="fu">fashion</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="model" class="level2" data-number="4.6">
-<h2 data-number="4.6" class="anchored" data-anchor-id="model"><span class="header-section-number">4.6</span> Model</h2>
+<section id="model" class="level2" data-number="5.6">
+<h2 data-number="5.6" class="anchored" data-anchor-id="model"><span class="header-section-number">5.6</span> Model</h2>
 <p>Read more about logistic regression <a href="https://uc-r.github.io/logistic_regression">here</a>, <a href="https://www.r-bloggers.com/2018/11/interpreting-generalized-linear-models/">here</a>, and <a href="https://juliasilge.com/blog/bird-baths/">here</a>.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># easy stats plot</span></span>
@@ -466,8 +478,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_light</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="report" class="level2" data-number="4.7">
-<h2 data-number="4.7" class="anchored" data-anchor-id="report"><span class="header-section-number">4.7</span> Report</h2>
+<section id="report" class="level2" data-number="5.7">
+<h2 data-number="5.7" class="anchored" data-anchor-id="report"><span class="header-section-number">5.7</span> Report</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(patchwork)</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggtext)</span>
@@ -762,12 +774,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./dtool_polars.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Polars</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Polars</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./references.html" class="pagination-link">
-        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./dtool_payroll.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Example 2</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

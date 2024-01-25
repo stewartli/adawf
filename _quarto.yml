@@ -20,10 +20,12 @@ book:
       chapters: 
         - infra_local.qmd
         - infra_etl.qmd
+        - infra_axum.qmd
     - part: dtool.qmd
       chapters: 
         - dtool_polars.qmd
         - dtool_datatable.qmd
+        - dtool_payroll.qmd
     - references.qmd
   # appendices:
     # - tools.qmd
