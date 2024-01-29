@@ -32,7 +32,7 @@
     "href": "infra_axum.html",
     "title": "3  Example 1",
     "section": "",
-    "text": "It is very useful to create a micro service API internally.\n\n\n\nWeb server\n\n\n\n\n\nGet\n\n\n\n\n\nPost\n\n\n\n\n\nTemplate\n\n\n\n\n\nR client\n\n\n\nhttr2::request('localhost:3000/share') %&gt;% \n  httr2::req_perform() %&gt;% \n  httr2::resp_body_string()"
+    "text": "It is very useful to create a micro service API internally.\n\n\n\nWeb server\n\n\n\n\n\nGet\n\n\n\n\n\nPost\n\n\n\n\n\nTemplate\n\n\n\n\n\nR client\n\n\n\nhttr2::request('localhost:3000/share') %&gt;% \n  httr2::req_perform() %&gt;% \n  httr2::resp_body_string()\n\n\n\n\nRequest CLI 1\n\n\n\n\n\nRequest CLI 2"
   },
   {
     "objectID": "dtool.html#footnotes",

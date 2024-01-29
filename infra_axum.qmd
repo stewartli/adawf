@@ -27,7 +27,10 @@ httr2::request('localhost:3000/share') %>%
 ```
 
 
+![Request CLI 1](pic/fmp_01.png)
 
+
+![Request CLI 2](pic/fmp_02.png)
 
 
 
