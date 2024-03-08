@@ -1,0 +1,49 @@
+# FAudit
+
+
+Create a command line tool to organize the workflow including folder structure and relevant config files.    
+
+
+[<img src="./pic/stflow3.png" width="800" height="400"/>](https://youtu.be/K4nRmaj-K3I)
+
+
+![faudit help](pic/01_fa_cli.png)
+
+
+![faudit init](pic/02_fa_init.png)
+
+
+![faudit new 1](pic/03_fa_new.png)
+
+
+![faudit new 2](pic/04_fa_new.png)
+
+
+![faudit report](pic/05_fa_report.png)
+
+
+![faudit new 3](pic/06_fa_new.png)
+
+
+![faudit new 4](pic/07_fa_new.png)
+
+
+![faudit show](pic/08_fa_show.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

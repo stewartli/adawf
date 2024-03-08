@@ -21,6 +21,7 @@ book:
         - infra_local.qmd
         - infra_etl.qmd
         - infra_axum.qmd
+        - infra_faudit.qmd
     - part: dtool.qmd
       chapters: 
         - dtool_polars.qmd
